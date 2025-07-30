@@ -9,7 +9,7 @@
                     <div>{{ audio["ARTIST"] }}</div></a>
             </div>
             <div class="song-controls" style="display: flex; align-items: center; gap: 10px;">
-                <img src="https://via.placeholder.com/60" alt="Cover" class="song-image">
+                <img style="width: 50px" src="{{ audio.IMAGE }}" alt="Cover" class="song-image">
                 <a href="{{ url_for('music_info', audio_id=audio['ID']) }}"><button style="background: none; border: none; cursor: pointer;">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Black_triangle.svg" alt="Play Button"
                          style="width: 30px; height: 30px; transform: rotate(15deg);">
