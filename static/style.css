@@ -1,0 +1,14 @@
+body {
+    height: 100vh; /* Высота всего экрана */
+    width: 100vw; /* Ширина всего экрана */
+    background-image: url("img_1.png"); /* Путь к изображению */
+    background-size: cover; /* Или contain, в зависимости от желаемого эффекта */
+    background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+    background-position: center; /* Позиция фона */
+}
+
+audio{
+
+width:  100%;
+
+}

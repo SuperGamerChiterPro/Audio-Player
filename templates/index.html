@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+    {% for audio in audios %}
+        <div class="song-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ccc;">
+            <div class="song-info">
+                <div><strong>{{ audio["NAME"] }}</strong></div>
+                    <div>{{ audio["ARTIST"] }}</div></a>
+            </div>
+            <div class="song-controls" style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://via.placeholder.com/60" alt="Cover" class="song-image">
+                <a href="{{ url_for('music_info', audio_id=audio['ID']) }}"><button style="background: none; border: none; cursor: pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Black_triangle.svg" alt="Play Button"
+                         style="width: 30px; height: 30px; transform: rotate(15deg);">
+                </button></a>
+            </div>
+        </div>
+    {% endfor %}
+</main>
+{% endblock main %}

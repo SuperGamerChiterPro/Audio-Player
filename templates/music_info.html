@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+  <div class="audio-container">
+      <div class="song-row">
+    <div class="text-info">
+    </div>
+  </div>
+
+
+
+    <div class="container-fluid mt-3">
+  <div class="row music_info">
+    <div class="col-sm-7 p-5 "><h3>{{ audio.NAME }}</h3></div>
+    <div class="col-sm-3 p-5 "><h3>{{ audio.ARTIST }}</h3></div>
+    <div class="col-sm-2 p-5 "><h3>{{ audio.IMAGE }}</h3></div>
+  </div>
+
+  <div class="row music_info">
+    <div class="col-sm-11 p-3 "><h3><b>{{ audio.DESCRIPTION }}</b></h3></div>
+    <div class="col-sm-1 p-3 "><h3>ID: {{ audio.ID }}</h3></div>
+  </div>
+
+
+</div>
+
+    <audio controls>
+  <source src="{{ url_for('static', filename=audio.LINK) }}" type="audio/mpeg">
+  Ваш браузер не підтримує елемент <code>audio</code>.
+</audio>
+
+
+  <style>
+    .audio-container {
+      width: 90%;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.2); /* прозорий фон */
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      color: #333;
+    }
+    h3 {
+      margin-top: 10px;
+    }
+
+    .music_info {
+
+    color:white;
+
+    }
+
+
+
+
+  </style>
+</main>
+{% endblock %}
